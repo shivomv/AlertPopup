@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button class="success" onclick="showSuccessPopup()">Show Success Popup</button>
-    <button class "error" onclick="showErrorPopup()">Show Error Popup</button>
-    <button class="warning" onclick="showWarningPopup()">Show Warning Popup</button>
+    <div class="container">
+        <button class=" btn button--success" onclick="showSuccessPopup()">Show Success Popup</button>
+        <button class=" btn button--error" onclick="showErrorPopup()">Show Error Popup</button>
+        <button class=" btn button--warning" onclick="showWarningPopup()">Show Warning Popup</button>
+    </div>
 
     <!-- Success Popup -->
     <div class="popup popup--icon -success js_success-popup">
         <div class="popup__background"></div>
         <div class="popup__content">
             <h3 class="popup__content__title">
-                Success
+                Success!
             </h3>
-            <p>Login Successfully</p>
+            <p>This is Success message.</p>
         </div>
     </div>
 
@@ -27,9 +29,9 @@
         <div class="popup__background"></div>
         <div class="popup__content">
             <h3 class="popup__content__title">
-                Error
+                Error!
             </h3>
-            <p>Incorrect username or password.</p>
+            <p>This is Error message.</p>
             <p>
                 <button class="button button--error" onclick="closeErrorPopup()">Close</button>
             </p>
@@ -41,7 +43,7 @@
         <div class="popup__background"></div>
         <div class="popup__content">
             <h3 class="popup__content__title">
-                Warning
+                Warning!
             </h3>
             <p>This is an important Warning message.</p>
             <p>
