@@ -1,3 +1,22 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html, body{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+#main{
+  width: 100vw;
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1548567117-02328f050eaa?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjB8fHxlbnwwfHx8fHw%3D');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .container{
   width: 40%;
   height: 40%;
@@ -24,7 +43,7 @@
 }
 /* POPUP CSS START   */
  .button {
-    margin-bottom: 4px;
+    margin: 10px;
     padding: 8px 12px;
     border: 1px solid #75B9E1;
     border-radius: 3px;
@@ -87,9 +106,8 @@
     text-align: center;
     -webkit-animation: hide-popup 0.3s forwards;
             animation: hide-popup 0.3s forwards;
-    /**
-     * Popup types.
-     */
+
+ /* Popup Types  */
   }
   .popup--visible .popup__content {
     -webkit-animation: show-popup 0.3s forwards;
@@ -97,27 +115,6 @@
   }
   .popup--icon .popup__content {
     padding-top: 130px;
-    /**
-     * Animations on opened popups.
-     *
-     * We need to prepend ".popup--visible" with no space to "&" to match the
-     * an opened popup: ".popup--visible.popup--icon".
-     *
-     * Therefore we need the "at-root" function to break out of nesting as well as the
-     * "selector-append" function to append parent selectors without space.
-     *
-     * Details:
-     *  - https://css-tricks.com/the-sass-ampersand/
-     *  - http://sass-lang.com/documentation/Sass/Script/Functions.html#selector_append-instance_method
-     */
-    /**
-     * Different popup icon styles
-     *
-     * E.g. selector for type question: ".popup--icon.-question" to match class="popup--icon -question"
-     *
-     * To have an easier selector in SCSS we use a little workaround and rearrange the selectors:
-     *  ".-question.popup--icon" is also matching class="popup--icon -question"
-     */
   }
   .popup--icon .popup__content:before, .popup--icon .popup__content:after {
     position: absolute;
